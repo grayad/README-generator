@@ -1,11 +1,21 @@
 // TODO: Include packages needed for this application
 var inquirer = require("inquirer");
+var fs = require("fs");
+var generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = [{
     type: "input",
     name: "userName",
-    message: "What is your Github username?"
+    message: "What is your Github username? (Required)",
+    validate: userName => {
+        if (userName) {
+          return true;
+        } else {
+          console.log('Please enter your GitHub username!');
+          return false;
+        }
+    }
 },
 {
     type: "input",
@@ -14,8 +24,17 @@ const questions = [{
 },
 {
     type: "input",
-    name: "projectName",
-    message: "What is your Project's name?"
+    name: "title",
+    message: "What is your Project's name? (Required)",
+    validate: title => {
+        if (title) {
+          return true;
+        } else {
+          console.log('Please enter a project name!');
+          return false;
+        }
+    }
+
 },
 {
     type: "input",
@@ -30,7 +49,7 @@ const questions = [{
 },
 {
     type: "input",
-    name: "install-command",
+    name: "install",
     message: "What command should be run to install dependencies?",
     default: "npm i"
 },
@@ -42,7 +61,7 @@ const questions = [{
 },
 {
     type: "input",
-    name: "using",
+    name: "usage",
     message: "What does the user need to know about using the repo?"
 },
 {
@@ -51,10 +70,44 @@ const questions = [{
     message: "What does the user need to know about contributing to the repo?"
 }];
 
-inquirer.prompt(questions);
+const promptUser = () => {
+    return inquirer.prompt(questions)
+};
+
+// inquirer.prompt(questions).then(answers => {
+//     var fileName = answers.name.replace(/\s+/g, "").toLowercase() + ".json";
+//     // or fileName = '$answers.name.toLowercase().split(" ").join("")}.json';
+//     var data =JSON.stringify(answers, null, "\t");
+//     console.log(data);
+
+//     fs.writeFile(fileName,data, (err) => {
+//         if(err) {
+//             console.log("Error: ", err);
+//         } else {
+//             console.log("Success!")
+//         }
+//     });
+// });
+ 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+
+promptUser()
+ .then(answers => {
+        console.log(answers);
+        var answers = JSON.stringify(answers, null, '\t');
+        console.log(answers);
+        var markdown = generateMarkdown(answers);
+        fs.writeFile('README.md', markdown, (err) => {
+            if (err) throw new Error(err);
+
+            console.log('README complete! Check out README.md to see the output!');
+       });
+});
+
+
+
+
 
 // TODO: Create a function to initialize app
 function init() {}
