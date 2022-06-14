@@ -72,38 +72,24 @@ const questions = [{
 
 const promptUser = () => {
     return inquirer.prompt(questions)
-};
-
-// inquirer.prompt(questions).then(answers => {
-//     var fileName = answers.name.replace(/\s+/g, "").toLowercase() + ".json";
-//     // or fileName = '$answers.name.toLowercase().split(" ").join("")}.json';
-//     var data =JSON.stringify(answers, null, "\t");
-//     console.log(data);
-
-//     fs.writeFile(fileName,data, (err) => {
-//         if(err) {
-//             console.log("Error: ", err);
-//         } else {
-//             console.log("Success!")
-//         }
-//     });
-// });
- 
+}; 
 
 // TODO: Create a function to write README file
-
 promptUser()
- .then(answers => {
+    .then(answers => {
+        // console.log(answers);
+        // var answers = JSON.parse(answers);
         console.log(answers);
-        var answers = JSON.stringify(answers, null, '\t');
-        console.log(answers);
-        var markdown = generateMarkdown(answers);
-        fs.writeFile('README.md', markdown, (err) => {
+        return generateMarkdown(answers);
+    })
+    .then(readme => {
+        fs.writeFile('README.md', readme, (err) => {
             if (err) throw new Error(err);
 
             console.log('README complete! Check out README.md to see the output!');
        });
-});
+    });
+
 
 
 
