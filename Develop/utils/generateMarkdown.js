@@ -16,10 +16,8 @@ const generateInfo = infoText => {
   // name and email
 }
 function generateMarkdown(data) {
-  console.log(typeof data)
   return (
-  `# Project Title
-  ${data.title}
+  `# ${data.title}
 
   ## Project Description
   ${data.desc}
@@ -48,8 +46,8 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  ${data.userName}
-  ${data.email}
+  - Github: ${data.userName} https://github.com/${data.userName}
+  - If you have any questions, please email ${data.email}
   `);
 };
 

@@ -77,9 +77,6 @@ const promptUser = () => {
 // TODO: Create a function to write README file
 promptUser()
     .then(answers => {
-        // console.log(answers);
-        // var answers = JSON.parse(answers);
-        console.log(answers);
         return generateMarkdown(answers);
     })
     .then(readme => {

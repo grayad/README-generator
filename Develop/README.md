@@ -1,8 +1,7 @@
-# Project Title
-  proj
+# proj
 
   ## Project Description
-  
+  desc
     
   ## Table of Contents
   - [Installation](#installation)
@@ -16,18 +15,18 @@
   npm i
 
   ## Usage
-  
+  use
 
   ## License
   MIT
 
   ## Contributing
-  
+  contr
 
   ## Tests
   npm test
 
   ## Questions
-  grayad
-  
+  - Github: grayad https://github.com/grayad
+  - If you have any questions, please email email
   
