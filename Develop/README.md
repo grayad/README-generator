@@ -1,9 +1,9 @@
-# best-project
+# g
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
   ## Project Description
-  the best project
+  desc
     
   ## Table of Contents
   - [Installation](#installation)
@@ -17,18 +17,18 @@
   npm i
 
   ## Usage
-  use it
+  
 
   ## License
-  This application is covered under MIT
+  This application is covered under GPL 3.0
 
   ## Contributing
-  contribute
+  
 
   ## Tests
   npm test
 
   ## Questions
-  - Github: grayad https://github.com/grayad
-  - If you have any questions, please email ag@gmail.com
+  - Github: g https://github.com/g
+  - If you have any questions, please email 
   
