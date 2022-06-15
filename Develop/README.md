@@ -1,7 +1,9 @@
-# proj
+# best-project
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Project Description
-  desc
+  the best project
     
   ## Table of Contents
   - [Installation](#installation)
@@ -15,18 +17,18 @@
   npm i
 
   ## Usage
-  use
+  use it
 
   ## License
-  MIT
+  This application is covered under MIT
 
   ## Contributing
-  contr
+  contribute
 
   ## Tests
   npm test
 
   ## Questions
   - Github: grayad https://github.com/grayad
-  - If you have any questions, please email email
+  - If you have any questions, please email ag@gmail.com
   
