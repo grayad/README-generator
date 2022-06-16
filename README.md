@@ -1,5 +1,8 @@
 # README-generator
 
+## Description
+A Node.js application that prompts a user for project information, then generates a readme for that project.
+
 ## User Story
 - AS A developer
 - I WANT a README generator
@@ -26,7 +29,7 @@
 - JavaScript
 - Node.js
 
-## Website
-
 ## Application Video
+https://drive.google.com/file/d/1YgDUTLiG_p-JLfKNe6JS8T3Q2aGDNnZ2/view
+
 
