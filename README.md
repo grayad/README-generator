@@ -3,6 +3,9 @@
 ## Description
 A Node.js application that prompts a user for project information, then generates a readme for that project.
 
+## How to Use
+To use this repository's application, clone the code to your device and run "node app.js" in the command line. You will need Node.js installed to do so. 
+
 ## User Story
 - AS A developer
 - I WANT a README generator
